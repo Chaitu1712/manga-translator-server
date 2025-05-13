@@ -1,2 +1,7 @@
 Flask>=2.0
-gunicorn>=20.0 # Recommended web server for production on Render
+gunicorn>=20.0
+easyocr>=1.7.0 # Or latest version
+torch
+torchvision
+opencv-python-headless # For server-side image processing
+numpy # Dependency for OpenCV/EasyOCR
