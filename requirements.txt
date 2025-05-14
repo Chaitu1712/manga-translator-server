@@ -1,7 +1,7 @@
 Flask>=2.0
 gunicorn>=20.0
-easyocr>=1.7.0 # Or latest version
+easyocr>=1.7.0
 torch
 torchvision
-opencv-python-headless # For server-side image processing
-numpy # Dependency for OpenCV/EasyOCR
+opencv-python-headless
+numpy

@@ -5,17 +5,7 @@ import easyocr
 import numpy as np # EasyOCR often works with numpy arrays
 import cv2 # OpenCV is needed by EasyOCR for image handling
 
-# Configure basic logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-try:
-    logging.info("Initializing EasyOCR Reader...")
-    # Consider adding more languages based on your needs: ['en', 'ja', 'ko', 'ch_sim'] etc.
-    reader = easyocr.Reader(['en'], gpu=False) # Start with English for now
-    logging.info("EasyOCR Reader initialized successfully.")
-except Exception as e:
-    logging.error(f"Failed to initialize EasyOCR: {e}")
-    # Handle initialization failure - maybe the app shouldn't start or should report error status
-    reader = None # Indicate that OCR is not available
+
 
 app = Flask(__name__)
 
