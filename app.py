@@ -83,7 +83,7 @@ def upload_image():
             """
             responseTranslation = clientTrans.models.generate_content(
                 model="gemini-2.0-flash",
-                contents=[img,promptTranslation]
+                contents=[promptTranslation]
             )
             translated_text = responseTranslation.text
             start_index = translated_text.find('{')
