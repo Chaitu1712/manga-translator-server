@@ -3,3 +3,4 @@ download.py
 run_waitress.py
 .env
 ___pycache__/
+.vscode/settings.json

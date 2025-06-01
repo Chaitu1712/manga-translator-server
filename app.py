@@ -75,7 +75,7 @@ def upload_image():
             if not GOOGLE_API_KEY_Trans:
                 return jsonify({"status": "error", "message": "Google API key for translation not configured"}), 500
             promptTranslation = f"""
-            Translate the following text from {detected_language} to English:
+            Translate the following text from {detected_language} e.g., 'ja' for Japanese, 'ko' for Korean, 'en' for English, 'ch_sim' for chinese simplified and 'ch_tra' for chinese traditional to English:
             {ocr_text}
             Provide the output as a JSON object with the
             following keys:
@@ -96,8 +96,6 @@ def upload_image():
             logging.info(f"Gemini Translation successful.")
             return jsonify({
                 "status": "success",
-                "ocr_text": ocr_text,
-                "detected_language": detected_language,
                 "translated_text": translated_text
             })
         except (ValueError, KeyError, json.JSONDecodeError) as e:
